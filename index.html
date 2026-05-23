@@ -498,7 +498,7 @@
     body:not(.dev) .setup-notice { display: none; }
   </style>
 </head>
-<body class="dev">
+<body class="">
 
   <div class="page">
 
@@ -514,7 +514,7 @@
       <strong>setup instructions</strong>
       1. Make a Google Sheet with columns: <code>Name</code>, <code>Role</code>, <code>Venmo</code>, <code>CashApp</code>, <code>Instagram</code>, <code>PhotoURL</code>, <code>EventName</code> (row 1 = headers, row 2+ = performers)<br>
       2. File → Share → Publish to web → Sheet1 → CSV → Publish. Copy the URL.<br>
-      3. In this file, replace <code>YOUR_SHEET_CSV_URL</code> in the script below with that URL.<br>
+      3. In this file, replace <code>https://docs.google.com/spreadsheets/d/e/2PACX-1vQrHl7eusooNoXwGbW8XjbO9pw7zkDHU21c8HRMPglSdbxUph4HGxFgmASa6tJypvojVz1XE1pY9Gev/pub?output=csv</code> in the script below with that URL.<br>
       4. Remove the word <code>dev</code> from the <code>&lt;body&gt;</code> tag to hide this notice.<br>
       5. Deploy the folder to Vercel. Done!
     </div>
@@ -601,7 +601,7 @@
     // ─────────────────────────────────────────────
     // REPLACE THIS with your published Google Sheet CSV URL
     // File → Share → Publish to web → CSV
-    const SHEET_URL = 'YOUR_SHEET_CSV_URL';
+    const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQrHl7eusooNoXwGbW8XjbO9pw7zkDHU21c8HRMPglSdbxUph4HGxFgmASa6tJypvojVz1XE1pY9Gev/pub?output=csv';
     // ─────────────────────────────────────────────
 
     // DEMO DATA — shown when SHEET_URL is not set
@@ -700,7 +700,7 @@
     }
 
     async function loadSheet() {
-      if (!SHEET_URL || SHEET_URL === 'YOUR_SHEET_CSV_URL') {
+      if (!SHEET_URL || SHEET_URL === 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQrHl7eusooNoXwGbW8XjbO9pw7zkDHU21c8HRMPglSdbxUph4HGxFgmASa6tJypvojVz1XE1pY9Gev/pub?output=csv') {
         renderGrid(DEMO_PERFORMERS, DEMO_EVENT);
         return;
       }
